@@ -5,15 +5,15 @@ import { downloads } from '../data/profileContent.js';
 
 const labels = {
   fr: {
-    cv: 'Voir mon CV',
-    contact: 'Me contacter',
-    quick: 'Version 30 secondes',
+    cv: 'Mon CV',
+    contact: 'Contact',
+    quick: 'Profil 30s',
     download: 'Télécharger le CV',
   },
   en: {
-    cv: 'View resume',
-    contact: 'Contact me',
-    quick: '30-second version',
+    cv: 'Resume',
+    contact: 'Contact',
+    quick: '30s profile',
     download: 'Download resume',
   },
 };

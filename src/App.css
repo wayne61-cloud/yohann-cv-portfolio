@@ -205,6 +205,12 @@
   gap: 1.05rem;
 }
 
+.page > *,
+.surface-card,
+.page-header {
+  min-width: 0;
+}
+
 .page-header {
   padding: 1.3rem 1.35rem;
   border-radius: var(--radius-lg);
@@ -380,7 +386,8 @@
 .sticky-action-btn {
   width: 100%;
   justify-content: center;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
 }
 
 .btn {
@@ -1417,10 +1424,6 @@
     align-items: flex-start;
   }
 
-  .sticky-action-shell {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .brief-meta-grid {
     grid-template-columns: 1fr;
   }
@@ -1439,7 +1442,7 @@
   .main-shell {
     width: 94%;
     margin-top: 0.86rem;
-    padding-bottom: 12.2rem;
+    padding-bottom: 6.4rem;
   }
 
   .page-header,
@@ -1455,21 +1458,45 @@
   .button-row {
     width: 100%;
     flex-wrap: wrap;
+    gap: 0.42rem;
   }
 
   .btn {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    font-size: 0.76rem;
+    padding: 0.44rem 0.68rem;
   }
 
   .sticky-action-shell {
     width: 94%;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
     gap: 0.34rem;
     padding: 0.4rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sticky-action-shell::-webkit-scrollbar {
+    display: none;
   }
 
   .sticky-action-btn {
+    flex: 0 0 auto;
+    width: auto;
     font-size: 0.74rem;
     padding: 0.46rem 0.52rem;
+    white-space: nowrap;
+  }
+
+  .quick-facts-grid,
+  .apps-grid,
+  .soft-skill-grid,
+  .hobby-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .contact-row {
@@ -1479,12 +1506,6 @@
   .score-row {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .soft-skill-grid,
-  .apps-grid,
-  .hobby-grid {
-    grid-template-columns: 1fr;
   }
 
   .experience-journey li {
@@ -1514,6 +1535,19 @@
   }
 
   .quick-facts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .quick-facts-grid,
+  .apps-grid,
+  .soft-skill-grid,
+  .hobby-grid {
     grid-template-columns: 1fr;
+  }
+
+  .main-shell {
+    padding-bottom: 5.9rem;
   }
 }

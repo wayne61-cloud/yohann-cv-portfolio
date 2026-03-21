@@ -54,6 +54,7 @@ body {
     radial-gradient(circle at 88% 92%, rgba(95, 168, 255, 0.14), transparent 30%),
     var(--bg);
   color: var(--text);
+  overflow-x: hidden;
 }
 
 a {
