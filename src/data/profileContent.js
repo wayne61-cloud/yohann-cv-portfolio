@@ -42,7 +42,7 @@ export const homeContent = {
     timelineItems: [
       { label: 'Immédiat', detail: 'Ouvert aux échanges et entretiens' },
       {
-        label: 'Rentrée 2026',
+        label: 'Rentrée septembre 2026',
         detail: 'Démarrage alternance Bachelor Gestion Finance (IGEFI Lille)',
       },
       {
@@ -75,7 +75,7 @@ export const homeContent = {
     timelineItems: [
       { label: 'Immediate', detail: 'Open to interviews and hiring discussions' },
       {
-        label: '2026 intake',
+        label: 'September 2026 intake',
         detail: 'Work-study start for Bachelor in Finance Management (IGEFI Lille)',
       },
       { label: 'Schedule', detail: '3 weeks in company and 1 week of classes' },
@@ -604,7 +604,7 @@ export const contactContent = {
     detailsTitle: 'Coordonnées',
     downloadTitle: 'Documents',
     availabilityTitle: 'Disponibilité',
-    availability: 'Ouvert aux entretiens dès maintenant · Mobilité Lille / remote',
+    availability: 'Disponible pour la rentrée septembre 2026 · Mobilité Lille / remote',
     sendMail: 'Envoyer un email',
     call: 'Appeler',
     copyMail: 'Copier l\'email',
@@ -620,7 +620,7 @@ export const contactContent = {
     detailsTitle: 'Contact details',
     downloadTitle: 'Documents',
     availabilityTitle: 'Availability',
-    availability: 'Open to interviews now · Lille / remote mobility',
+    availability: 'Available for September 2026 intake · Lille / remote mobility',
     sendMail: 'Send email',
     call: 'Call',
     copyMail: 'Copy email',

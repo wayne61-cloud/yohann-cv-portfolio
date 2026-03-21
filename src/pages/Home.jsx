@@ -8,7 +8,7 @@ import { Badge, SurfaceCard } from '../components/ui.jsx';
 const homeText = {
   fr: {
     name: 'Yohann-Axel Bouah',
-    role: 'Candidat en alternance comptabilité & gestion - disponible pour la rentrée 2026',
+    role: 'Candidat en alternance comptabilité & gestion - disponible pour la rentrée septembre 2026',
     meta: 'Lille · Rythme 3 semaines en entreprise et 1 semaine de cours',
     keySkills:
       'Compétences clés : saisie comptable, TVA, relation client, Excel, Pennylane.',
@@ -52,7 +52,7 @@ const homeText = {
   },
   en: {
     name: 'Yohann-Axel Bouah',
-    role: 'Accounting & management work-study candidate - available for 2026 intake',
+    role: 'Accounting & management work-study candidate - available for September 2026 intake',
     meta: 'Lille · 3 weeks in company and 1 week of classes',
     keySkills:
       'Key skills: bookkeeping, VAT, client communication, Excel, Pennylane.',
