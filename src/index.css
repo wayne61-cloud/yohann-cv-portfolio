@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
+
+:root {
+  --bg: #040507;
+  --bg-soft: #0a0d13;
+  --surface: rgba(14, 19, 29, 0.72);
+  --surface-strong: rgba(11, 15, 23, 0.92);
+  --line: rgba(238, 198, 103, 0.24);
+  --line-strong: rgba(238, 198, 103, 0.4);
+  --text: #f5f4f1;
+  --text-muted: #c8c8c3;
+  --accent: #f0c15d;
+  --accent-strong: #ffd47c;
+  --accent-ink: #201708;
+  --radius-xs: 0.55rem;
+  --radius-sm: 0.9rem;
+  --radius-md: 1.2rem;
+  --radius-lg: 1.6rem;
+  --radius-pill: 999px;
+  --shadow-xl: 0 28px 72px rgba(0, 0, 0, 0.52);
+  --shadow-lg: 0 18px 42px rgba(0, 0, 0, 0.4);
+  --max-width: 1180px;
+
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.08rem);
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 12% 10%, rgba(232, 186, 83, 0.16), transparent 32%),
+    radial-gradient(circle at 88% 92%, rgba(95, 168, 255, 0.14), transparent 30%),
+    var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+button {
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
