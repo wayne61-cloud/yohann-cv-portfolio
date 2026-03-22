@@ -16,6 +16,7 @@ import { Badge, PageHeader, SurfaceCard } from '../components/ui.jsx';
 export default function ProjectsPage() {
   const { lang } = useAppContext();
   const content = projectsContent[lang];
+  const logoBaseUrl = `${import.meta.env.BASE_URL}apps/`;
 
   const apps = useMemo(() => {
     if (lang === 'fr') {
@@ -23,7 +24,8 @@ export default function ProjectsPage() {
         {
           id: 'fox-erp',
           name: 'Fox ERP',
-          logo: '/apps/fox-erp.png',
+          short: 'FX',
+          logo: `${logoBaseUrl}fox-erp.png`,
           lines: [
             'Fox ERP centralise les modules de gestion clés dans une seule interface.',
             'L\'objectif principal est de gagner du temps sur le suivi opérationnel quotidien.',
@@ -40,7 +42,8 @@ export default function ProjectsPage() {
         {
           id: 'maya-mixa',
           name: 'Maya Mixa',
-          logo: '/apps/maya-mixa.png',
+          short: 'MM',
+          logo: `${logoBaseUrl}maya-mixa.png`,
           lines: [
             'Maya Mixa est pensée pour la gestion de contenu et la communication digitale.',
             'Elle aide à organiser les idées, les publications et les campagnes.',
@@ -57,7 +60,8 @@ export default function ProjectsPage() {
         {
           id: 'maya-home',
           name: 'Maya Home',
-          logo: '/apps/maya-home.png',
+          short: 'MH',
+          logo: `${logoBaseUrl}maya-home.png`,
           lines: [
             'Maya Home sert de point d\'entrée principal vers les outils du projet.',
             'Elle rassemble les accès prioritaires dans un seul écran.',
@@ -74,7 +78,8 @@ export default function ProjectsPage() {
         {
           id: 'cabinet-yao',
           name: 'Cabinet Yao',
-          logo: '/apps/cabinet-yao.png',
+          short: 'CY',
+          logo: `${logoBaseUrl}cabinet-yao.png`,
           lines: [
             'Cabinet Yao vise la gestion métier d\'un cabinet avec plus de structure.',
             'L\'application organise les dossiers et les suivis clients.',
@@ -95,7 +100,8 @@ export default function ProjectsPage() {
       {
         id: 'fox-erp',
         name: 'Fox ERP',
-        logo: '/apps/fox-erp.png',
+        short: 'FX',
+        logo: `${logoBaseUrl}fox-erp.png`,
         lines: [
           'Fox ERP centralizes key management modules in one workspace.',
           'The main goal is to speed up daily operational follow-up.',
@@ -112,7 +118,8 @@ export default function ProjectsPage() {
       {
         id: 'maya-mixa',
         name: 'Maya Mixa',
-        logo: '/apps/maya-mixa.png',
+        short: 'MM',
+        logo: `${logoBaseUrl}maya-mixa.png`,
         lines: [
           'Maya Mixa is designed for content and communication workflows.',
           'It helps organize ideas, publishing and campaign planning.',
@@ -129,7 +136,8 @@ export default function ProjectsPage() {
       {
         id: 'maya-home',
         name: 'Maya Home',
-        logo: '/apps/maya-home.png',
+        short: 'MH',
+        logo: `${logoBaseUrl}maya-home.png`,
         lines: [
           'Maya Home acts as the main entry point to project tools.',
           'It gathers priority actions in a single screen.',
@@ -146,7 +154,8 @@ export default function ProjectsPage() {
       {
         id: 'cabinet-yao',
         name: 'Cabinet Yao',
-        logo: '/apps/cabinet-yao.png',
+        short: 'CY',
+        logo: `${logoBaseUrl}cabinet-yao.png`,
         lines: [
           'Cabinet Yao focuses on structured cabinet workflow management.',
           'The app organizes files and client follow-up.',
@@ -161,9 +170,10 @@ export default function ProjectsPage() {
         ],
       },
     ];
-  }, [lang]);
+  }, [lang, logoBaseUrl]);
 
   const [selectedApp, setSelectedApp] = useState(null);
+  const [brokenLogos, setBrokenLogos] = useState({});
 
   function getProjectIcon(title) {
     const normalized = title.toLowerCase();
@@ -247,7 +257,24 @@ export default function ProjectsPage() {
           {apps.map((app) => (
             <div key={app.id} className="app-tile-wrap" role="listitem">
               <button type="button" className="app-tile" onClick={() => setSelectedApp(app)}>
-                <img src={app.logo} alt={app.name} className="app-logo" />
+                {brokenLogos[app.id] ? (
+                  <span className="app-icon">{app.short}</span>
+                ) : (
+                  <span className="app-logo-frame">
+                    <img
+                      src={app.logo}
+                      alt={app.name}
+                      className="app-logo"
+                      loading="lazy"
+                      onError={() =>
+                        setBrokenLogos((previousState) => ({
+                          ...previousState,
+                          [app.id]: true,
+                        }))
+                      }
+                    />
+                  </span>
+                )}
                 <span className="app-name">{app.name}</span>
               </button>
               <button
@@ -269,7 +296,24 @@ export default function ProjectsPage() {
       >
         {selectedApp ? (
           <div className="modal-app-details">
-            <img src={selectedApp.logo} alt={selectedApp.name} className="modal-app-logo" />
+            {brokenLogos[selectedApp.id] ? (
+              <span className="app-icon modal-app-icon">{selectedApp.short}</span>
+            ) : (
+              <span className="modal-app-logo-frame">
+                <img
+                  src={selectedApp.logo}
+                  alt={selectedApp.name}
+                  className="modal-app-logo"
+                  loading="lazy"
+                  onError={() =>
+                    setBrokenLogos((previousState) => ({
+                      ...previousState,
+                      [selectedApp.id]: true,
+                    }))
+                  }
+                />
+              </span>
+            )}
             <ol className="detail-lines">
               {selectedApp.lines.map((line) => (
                 <li key={line}>{line}</li>

@@ -3,17 +3,32 @@
   min-height: 100vh;
   overflow: hidden;
   isolation: isolate;
+  background: #080a10;
 }
 
 .app-shell::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 0.7px, transparent 0.7px);
-  background-size: 1.6rem 1.6rem;
-  opacity: 0.12;
+  background: radial-gradient(#000, transparent) 0 0 / 1em 1em space;
+  --mask: linear-gradient(#f00, rgba(0, 0, 0, 0.45));
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  filter: contrast(7);
+  opacity: 0.24;
   pointer-events: none;
   z-index: -1;
+}
+
+.app-shell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 12%, rgba(236, 182, 73, 0.18), transparent 34%),
+    radial-gradient(circle at 86% 88%, rgba(95, 168, 255, 0.18), transparent 36%);
+  pointer-events: none;
+  z-index: -2;
 }
 
 .ambient {
@@ -202,13 +217,27 @@
 
 .page {
   display: grid;
-  gap: 1.05rem;
+  gap: 1.35rem;
 }
 
 .page > *,
 .surface-card,
 .page-header {
   min-width: 0;
+}
+
+.page h1 {
+  font-size: clamp(1.8rem, 1.2rem + 1.6vw, 2.5rem);
+  font-weight: 800;
+}
+
+.page h2 {
+  font-size: clamp(1.15rem, 1rem + 0.7vw, 1.5rem);
+  font-weight: 700;
+}
+
+.page p {
+  opacity: 0.88;
 }
 
 .page-header {
@@ -235,14 +264,15 @@
   align-items: center;
   gap: 0.5rem;
   font-family: 'Sora', 'Manrope', sans-serif;
-  font-size: clamp(1.34rem, 1.13rem + 1vw, 2rem);
+  font-size: clamp(1.76rem, 1.2rem + 1.4vw, 2.45rem);
   line-height: 1.12;
   letter-spacing: -0.02em;
 }
 
 .page-subtitle {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.58;
   max-width: 72ch;
 }
 
@@ -668,6 +698,7 @@
 .section-block {
   display: grid;
   gap: 0.72rem;
+  margin-bottom: 1.65rem;
 }
 
 .section-title {
@@ -877,28 +908,150 @@
 
 .soft-skill-grid {
   display: grid;
-  gap: 0.58rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.82rem;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
 }
 
-.soft-skill-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.42rem;
+.skill-button-container {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  justify-self: center;
+}
+
+.skill-button-border {
+  position: relative;
+  padding: 3px;
+  inset: 0;
+  background: #0005;
+  border-radius: 0.98rem;
+  overflow: hidden;
+}
+
+.skill-button {
   justify-content: center;
-  border-radius: 0.85rem;
-  border: 1px solid rgba(244, 204, 114, 0.3);
-  background:
-    radial-gradient(circle at top right, rgba(95, 167, 255, 0.22), transparent 50%),
-    linear-gradient(145deg, rgba(30, 39, 57, 0.92), rgba(17, 23, 34, 0.96));
-  color: #f8f4ec;
-  padding: 0.62rem 0.7rem;
-  font-size: 0.82rem;
-  font-weight: 650;
+  align-items: center;
+  border: none;
+  border-radius: 0.86rem;
+  min-height: 60px;
+  width: 100%;
+  background: #111215;
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
 }
 
-.soft-skill-chip svg {
-  color: #ffd98e;
+.skill-button span {
+  font-size: 0.73rem;
+  font-weight: 650;
+  line-height: 1.15;
+}
+
+.skill-button svg {
+  color: #ffd88f;
+}
+
+.skill-real-button {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  outline: none;
+  border: none;
+  border-radius: 0.98rem;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.skill-backdrop {
+  position: absolute;
+  inset: -9900%;
+  background: radial-gradient(circle at 50% 50%, #0000 0, #0000 20%, #111111aa 50%);
+  background-size: 3px 3px;
+  z-index: 0;
+}
+
+.skill-spin {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  opacity: 0.5;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.skill-real-button:active ~ .skill-button-border .skill-spin {
+  opacity: 1;
+}
+
+.skill-spin-blur {
+  filter: blur(1.25em);
+}
+
+.skill-spin-intense {
+  inset: -0.125em;
+  filter: blur(0.3em);
+  border-radius: 0.75em;
+}
+
+.skill-spin-inside {
+  inset: -2px;
+  border-radius: inherit;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+.skill-spin::before {
+  content: '';
+  position: absolute;
+  inset: -150%;
+  animation:
+    skill-speen 8s cubic-bezier(0.56, 0.15, 0.28, 0.86) infinite,
+    skill-woah 4s infinite;
+  animation-play-state: paused;
+}
+
+.skill-real-button:hover ~ .skill-button-border .skill-spin::before {
+  animation-play-state: running;
+}
+
+.skill-spin-blur::before {
+  background: linear-gradient(90deg, #f50 30%, #0000 50%, #05f 70%);
+}
+
+.skill-spin-intense::before {
+  background: linear-gradient(90deg, #f95 20%, #0000 45% 55%, #59f 80%);
+}
+
+.skill-spin-inside::before {
+  background: linear-gradient(90deg, #fc9 30%, #0000 45% 55%, #9cf 70%);
+}
+
+@keyframes skill-speen {
+  0% {
+    rotate: 10deg;
+  }
+  50% {
+    rotate: 190deg;
+  }
+  to {
+    rotate: 370deg;
+  }
+}
+
+@keyframes skill-woah {
+  0%,
+  to {
+    scale: 1;
+  }
+  50% {
+    scale: 0.75;
+  }
 }
 
 .experience-journey {
@@ -1072,6 +1225,19 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
+.app-logo-frame,
+.modal-app-logo-frame {
+  border-radius: 1rem;
+  padding: 0.14rem;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.74), rgba(241, 245, 251, 0.88)),
+    rgba(255, 255, 255, 0.7);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.66),
+    0 12px 22px rgba(0, 0, 0, 0.34),
+    0 0 20px rgba(255, 214, 130, 0.18);
+}
+
 .app-tile:hover {
   border-color: rgba(244, 204, 112, 0.38);
   background:
@@ -1108,8 +1274,10 @@
 .app-logo {
   width: 3.3rem;
   aspect-ratio: 1;
-  border-radius: 0.86rem;
-  object-fit: cover;
+  border-radius: 0.82rem;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 0.24rem;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.35),
     0 12px 20px rgba(0, 0, 0, 0.4);
@@ -1236,11 +1404,18 @@
 }
 
 .modal-app-logo {
-  width: 5.4rem;
+  width: 5.2rem;
   aspect-ratio: 1;
-  border-radius: 1rem;
-  object-fit: cover;
+  border-radius: 0.9rem;
+  object-fit: contain;
+  background: #fff;
+  padding: 0.35rem;
   box-shadow: 0 15px 24px rgba(0, 0, 0, 0.38);
+}
+
+.modal-app-icon {
+  width: 5.2rem;
+  font-size: 1.4rem;
 }
 
 .detail-lines {

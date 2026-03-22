@@ -162,10 +162,24 @@ export default function SkillsExperiencesPage() {
           </div>
           <div className="soft-skill-grid">
             {content.softSkills.map((skill) => (
-              <button key={skill} type="button" className="soft-skill-chip">
-                <Sparkles size={14} />
-                <span>{skill}</span>
-              </button>
+              <div key={skill} className="skill-button-container">
+                <button
+                  type="button"
+                  className="skill-real-button"
+                  aria-label={skill}
+                  title={skill}
+                />
+                <div className="skill-button-border">
+                  <div className="skill-button">
+                    <Sparkles size={14} />
+                    <span>{skill}</span>
+                  </div>
+                  <div className="skill-backdrop" />
+                  <div className="skill-spin skill-spin-blur" />
+                  <div className="skill-spin skill-spin-intense" />
+                  <div className="skill-spin skill-spin-inside" />
+                </div>
+              </div>
             ))}
           </div>
         </SurfaceCard>
