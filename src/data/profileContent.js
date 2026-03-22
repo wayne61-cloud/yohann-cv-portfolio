@@ -53,9 +53,9 @@ export const homeContent = {
     impactTitle: 'Ce que je peux apporter dès le départ',
     impactItems: [
       'Saisie comptable clients/fournisseurs',
-      'Déclarations TVA et suivi des échéances',
+      'Participation à la préparation des déclarations de TVA',
       'Usage quotidien de Pennylane et Excel',
-      'Relation client et coordination à distance',
+      'Tenue comptable et coordination à distance',
     ],
   },
   en: {
@@ -83,9 +83,9 @@ export const homeContent = {
     impactTitle: 'What I can contribute from day one',
     impactItems: [
       'Customer/supplier bookkeeping',
-      'VAT returns and deadline tracking',
+      'Participation in VAT filing preparation',
       'Daily Pennylane and Excel workflow',
-      'Client communication and remote coordination',
+      'Bookkeeping operations and remote coordination',
     ],
   },
 };
@@ -106,8 +106,8 @@ export const skillSignals = {
 export const signalLabels = {
   fr: {
     accounting: 'Maîtrise comptable',
-    vat: 'Conformité TVA',
-    client: 'Relation client',
+    vat: 'Participation déclarations TVA',
+    client: 'Fiabilité opérationnelle',
     digital: 'Aisance outils numériques',
     analysis: 'Analyse des données',
     process: 'Organisation des processus',
@@ -118,8 +118,8 @@ export const signalLabels = {
   },
   en: {
     accounting: 'Accounting execution',
-    vat: 'VAT compliance',
-    client: 'Client management',
+    vat: 'VAT filing support',
+    client: 'Operational reliability',
     digital: 'Digital fluency',
     analysis: 'Data analysis',
     process: 'Process mindset',
@@ -177,7 +177,7 @@ export const cvContent = {
       'Diplômé du BTS Comptabilité et Gestion, en recherche d\'alternance pour le Bachelor Gestion Finance à l\'IGEFI Lille.',
     profileTitle: 'Profil',
     profile:
-      'Actuellement assistant comptable chez Finance Conseil (cabinet à Paris, mission en distanciel depuis Lille), je contribue à la production comptable, aux déclarations de TVA et au suivi des dossiers clients. Je suis également à l\'aise en anglais et j\'aime apprendre rapidement de nouveaux outils et méthodes de travail.',
+      'Actuellement assistant comptable chez Finance Conseil (cabinet à Paris, mission en distanciel depuis Lille), je suis opérationnel sur les missions de tenue comptable et je participe à la préparation des déclarations de TVA. Je suis également à l\'aise en anglais et j\'aime apprendre rapidement de nouveaux outils et méthodes de travail.',
     contactTitle: 'Coordonnées',
     contacts: [
       { label: 'Localisation', value: 'Lille, France' },
@@ -201,11 +201,11 @@ export const cvContent = {
         meta: 'Octobre 2024 - Aujourd\'hui · Paris (distanciel)',
         bullets: [
           'Saisie comptable clients et fournisseurs.',
-          'Préparation des déclarations de taxe sur la valeur ajoutée.',
-          'Suivi documentaire et contrôle de cohérence des pièces.',
-          'Communication régulière avec les clients du cabinet.',
+          'Participation à la préparation des déclarations de taxe sur la valeur ajoutée.',
+          'Tenue comptable et contrôle de cohérence des écritures.',
+          'Organisation et suivi des échéances comptables.',
         ],
-        tags: ['Pennylane', 'TVA', 'Saisie comptable', 'Relation client'],
+        tags: ['Pennylane', 'Tenue comptable', 'Saisie comptable', 'Rigueur'],
       },
     ],
     educationTitle: 'Formation',
@@ -222,11 +222,24 @@ export const cvContent = {
         detail:
           'Formation centrée sur la comptabilité générale, la fiscalité, la gestion et les outils numériques professionnels.',
       },
+      {
+        title: 'Licence Économie et Gestion · Université de Lille',
+        meta: '2 années de formation · option marketing international',
+        detail:
+          'Parcours universitaire en économie et gestion, avec une ouverture sur les enjeux de pilotage, d\'analyse et d\'environnement international.',
+      },
+      {
+        title: 'Baccalauréat Économique et Social · Lycée Nouvelle Chance',
+        meta: 'Spécialité mathématiques',
+        detail:
+          'Socle en sciences économiques et sociales renforcé par les mathématiques appliquées à l\'analyse et à la logique.',
+      },
     ],
     skillsTitle: 'Compétences clés',
     skills: [
+      'Tenue comptable',
       'Saisie comptable',
-      'Déclarations TVA',
+      'Participation à la déclaration de TVA',
       'Excel',
       'Pennylane',
       'EBP',
@@ -246,7 +259,7 @@ export const cvContent = {
       'BTS Accounting and Management graduate seeking a work-study role for the Bachelor in Finance Management at IGEFI Lille.',
     profileTitle: 'Profile',
     profile:
-      'I currently work as an assistant accountant at Finance Conseil (Paris-based firm, remote from Lille). I contribute to bookkeeping production, VAT returns and client file monitoring. I am comfortable in English and I enjoy learning new tools and processes quickly.',
+      'I currently work as an assistant accountant at Finance Conseil (Paris-based firm, remote from Lille). I am operational on bookkeeping missions and I participate in VAT filing preparation. I am comfortable in English and I enjoy learning new tools and processes quickly.',
     contactTitle: 'Contact details',
     contacts: [
       { label: 'Location', value: 'Lille, France' },
@@ -270,11 +283,11 @@ export const cvContent = {
         meta: 'October 2024 - Present · Paris (remote)',
         bullets: [
           'Customer and supplier bookkeeping.',
-          'Preparation of VAT returns.',
-          'Document quality checks and accounting consistency review.',
-          'Regular communication with firm clients.',
+          'Participation in VAT filing preparation.',
+          'Bookkeeping operations and accounting consistency checks.',
+          'Deadline tracking and structured execution.',
         ],
-        tags: ['Pennylane', 'VAT', 'Bookkeeping', 'Client relations'],
+        tags: ['Pennylane', 'Bookkeeping', 'Accounting operations', 'Rigor'],
       },
     ],
     educationTitle: 'Education',
@@ -290,11 +303,24 @@ export const cvContent = {
         detail:
           'Curriculum focused on accounting, taxation, management and professional digital tools.',
       },
+      {
+        title: 'Economics and Management Degree · University of Lille',
+        meta: '2 academic years · international marketing option',
+        detail:
+          'University track in economics and management, with exposure to business analysis, operations and international perspective.',
+      },
+      {
+        title: 'Economic and Social Baccalaureate · Lycee Nouvelle Chance',
+        meta: 'Mathematics specialization',
+        detail:
+          'Foundational training in economics and social sciences strengthened by mathematics and analytical reasoning.',
+      },
     ],
     skillsTitle: 'Core skills',
     skills: [
       'Bookkeeping',
-      'VAT returns',
+      'Accounting operations',
+      'VAT filing support',
       'Excel',
       'Pennylane',
       'EBP',
@@ -310,7 +336,7 @@ export const projectsContent = {
   fr: {
     title: 'Projets professionnels & entrepreneuriaux',
     subtitle:
-      'Des expériences concrètes, orientées exécution, relation client et montée en compétences finance.',
+      'Des expériences concrètes, orientées exécution, tenue comptable et montée en compétences finance.',
     sections: [
       {
         title: 'Comptabilité & finance',
@@ -320,19 +346,19 @@ export const projectsContent = {
             period: '2024 - 2026',
             bullets: [
               'Saisie comptable quotidienne et catégorisation des pièces.',
-              'Préparation des déclarations TVA et suivi des échéances.',
+              'Participation à la préparation des déclarations TVA et suivi des échéances.',
               'Mise à jour régulière des dossiers sur Pennylane.',
             ],
-            tags: ['Pennylane', 'TVA', 'Fiabilité opérationnelle'],
+            tags: ['Pennylane', 'Tenue comptable', 'Fiabilité opérationnelle'],
           },
           {
             title: 'Suivi d\'un portefeuille de TPE',
             period: '2025 - 2026',
             bullets: [
-              'Accompagnement des clients sur les pièces comptables attendues.',
+              'Collecte et vérification des pièces comptables attendues.',
               'Priorisation des tâches selon deadlines et criticité.',
             ],
-            tags: ['Organisation', 'Relation client', 'Rigueur'],
+            tags: ['Organisation', 'Priorisation', 'Rigueur'],
           },
         ],
       },
@@ -344,9 +370,9 @@ export const projectsContent = {
             period: '2023 - Aujourd\'hui',
             bullets: [
               'Développement d\'une activité de séjours en Côte d\'Ivoire.',
-              'Gestion des réservations, relation client et présence digitale.',
+              'Gestion des réservations et présence digitale.',
             ],
-            tags: ['Entrepreneuriat', 'Marketing', 'Service client'],
+            tags: ['Entrepreneuriat', 'Marketing', 'Gestion opérationnelle'],
           },
           {
             title: 'Straight Walk Marketing · Chargé de terrain',
@@ -376,14 +402,14 @@ export const projectsContent = {
         name: 'Fox ERP',
         short: 'FX',
         summary:
-          'Application ERP pour centraliser la gestion clients, la facturation et le suivi des opérations comptables.',
+          'Application ERP pour centraliser la gestion opérationnelle, la facturation et le suivi des opérations comptables.',
       },
       {
         id: 'maya-mixa',
         name: 'Maya Mixa',
         short: 'MM',
         summary:
-          'Application orientée contenus et communication, utilisée pour organiser les publications et la relation audience.',
+          'Application orientée contenus et communication, utilisée pour organiser les publications et la diffusion.',
       },
       {
         id: 'maya-home',
@@ -397,14 +423,14 @@ export const projectsContent = {
         name: 'Cabinet Yao',
         short: 'CY',
         summary:
-          'Plateforme métier pour la gestion d\'un cabinet: dossiers, suivi client et organisation des tâches.',
+          'Plateforme métier pour la gestion d\'un cabinet: dossiers, suivi opérationnel et organisation des tâches.',
       },
     ],
   },
   en: {
     title: 'Professional & entrepreneurial projects',
     subtitle:
-      'Execution-focused experiences across accounting, client service and entrepreneurial operations.',
+      'Execution-focused experiences across accounting operations and entrepreneurial projects.',
     sections: [
       {
         title: 'Accounting & finance',
@@ -414,19 +440,19 @@ export const projectsContent = {
             period: '2024 - 2026',
             bullets: [
               'Daily bookkeeping and document categorisation.',
-              'VAT return preparation and deadline monitoring.',
+              'Participation in VAT filing preparation and deadline monitoring.',
               'Consistent updates of files in Pennylane.',
             ],
-            tags: ['Pennylane', 'VAT', 'Operational reliability'],
+            tags: ['Pennylane', 'Bookkeeping', 'Operational reliability'],
           },
           {
             title: 'Small business portfolio follow-up',
             period: '2025 - 2026',
             bullets: [
-              'Client support on required accounting documentation.',
+              'Collection and review of required accounting documentation.',
               'Task prioritisation based on deadlines and impact.',
             ],
-            tags: ['Organisation', 'Client relations', 'Rigor'],
+            tags: ['Organisation', 'Prioritisation', 'Rigor'],
           },
         ],
       },
@@ -438,9 +464,9 @@ export const projectsContent = {
             period: '2023 - Present',
             bullets: [
               'Development of a travel-stay activity in Cote d\'Ivoire.',
-              'Bookings, customer communication and digital visibility.',
+              'Bookings management and digital visibility.',
             ],
-            tags: ['Entrepreneurship', 'Marketing', 'Customer service'],
+            tags: ['Entrepreneurship', 'Marketing', 'Operations'],
           },
           {
             title: 'Straight Walk Marketing · Field officer',
@@ -468,14 +494,14 @@ export const projectsContent = {
         name: 'Fox ERP',
         short: 'FX',
         summary:
-          'ERP app to centralize client management, invoicing and accounting operations tracking.',
+          'ERP app to centralize operational management, invoicing and accounting operations tracking.',
       },
       {
         id: 'maya-mixa',
         name: 'Maya Mixa',
         short: 'MM',
         summary:
-          'Content and communication app used to organize publishing and audience relationship workflows.',
+          'Content and communication app used to organize publishing workflows and digital distribution.',
       },
       {
         id: 'maya-home',
@@ -489,7 +515,7 @@ export const projectsContent = {
         name: 'Cabinet Yao',
         short: 'CY',
         summary:
-          'Business platform for cabinet operations: files, client follow-up and task organization.',
+          'Business platform for cabinet operations: files, workflow follow-up and task organization.',
       },
     ],
   },
@@ -505,7 +531,7 @@ export const skillsContent = {
     timelineTitle: 'Parcours expérience',
     hardSkills: [
       { name: 'Saisie comptable', level: 88 },
-      { name: 'TVA', level: 75 },
+      { name: 'Tenue comptable', level: 75 },
       { name: 'Pennylane', level: 84 },
       { name: 'Excel', level: 80 },
       { name: 'Organisation dossiers', level: 86 },
@@ -514,7 +540,7 @@ export const skillsContent = {
       'Rigueur',
       'Autonomie',
       'Polyvalence',
-      'Communication',
+      'Sens des priorités',
       'Curiosité',
       'Apprentissage continu',
     ],
@@ -522,14 +548,14 @@ export const skillsContent = {
       {
         title: 'Finance Conseil',
         period: '2024 - Aujourd\'hui',
-        summary: 'Assistant comptable: saisie, TVA, suivi dossiers et échanges clients.',
-        tags: ['Comptabilité', 'TVA', 'Client'],
+        summary: 'Assistant comptable: tenue comptable, saisie et suivi des échéances.',
+        tags: ['Comptabilité', 'Tenue comptable', 'Rigueur'],
       },
       {
         title: 'Zafira Séjour',
         period: '2023 - Aujourd\'hui',
-        summary: 'Projet entrepreneurial: réservations, marketing digital et relation client.',
-        tags: ['Gestion', 'Marketing', 'Service client'],
+        summary: 'Projet entrepreneurial: réservations, marketing digital et organisation.',
+        tags: ['Gestion', 'Marketing', 'Organisation'],
       },
       {
         title: 'Straight Walk Marketing',
@@ -554,7 +580,7 @@ export const skillsContent = {
     timelineTitle: 'Experience journey',
     hardSkills: [
       { name: 'Bookkeeping', level: 88 },
-      { name: 'VAT returns', level: 75 },
+      { name: 'Accounting operations', level: 75 },
       { name: 'Pennylane', level: 84 },
       { name: 'Excel', level: 80 },
       { name: 'File organisation', level: 86 },
@@ -563,7 +589,7 @@ export const skillsContent = {
       'Rigor',
       'Autonomy',
       'Versatility',
-      'Communication',
+      'Priority management',
       'Curiosity',
       'Continuous learning',
     ],
@@ -571,14 +597,14 @@ export const skillsContent = {
       {
         title: 'Finance Conseil',
         period: '2024 - Present',
-        summary: 'Assistant accountant: bookkeeping, VAT, file monitoring and client exchanges.',
-        tags: ['Accounting', 'VAT', 'Client work'],
+        summary: 'Assistant accountant: bookkeeping operations, entries and deadline follow-up.',
+        tags: ['Accounting', 'Bookkeeping', 'Rigor'],
       },
       {
         title: 'Zafira Sejour',
         period: '2023 - Present',
-        summary: 'Entrepreneurial project: bookings, digital marketing and customer management.',
-        tags: ['Operations', 'Marketing', 'Client service'],
+        summary: 'Entrepreneurial project: bookings, digital marketing and operations.',
+        tags: ['Operations', 'Marketing', 'Organisation'],
       },
       {
         title: 'Straight Walk Marketing',

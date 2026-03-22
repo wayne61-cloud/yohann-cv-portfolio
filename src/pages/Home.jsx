@@ -11,7 +11,7 @@ const homeText = {
     role: 'Candidat en alternance comptabilité & gestion - disponible pour la rentrée septembre 2026',
     meta: 'Lille · Rythme 3 semaines en entreprise et 1 semaine de cours',
     keySkills:
-      'Compétences clés : saisie comptable, TVA, relation client, Excel, Pennylane.',
+      'Compétences clés : tenue comptable, saisie comptable, Excel, Pennylane, anglais professionnel.',
     cardsTitle: 'Ce que vous recherchez',
     cards: [
       { label: 'Poste recherché', value: 'Alternance comptabilité / gestion' },
@@ -25,27 +25,28 @@ const homeText = {
     operationalTitle: 'Opérationnel dès le départ',
     operationalItems: [
       'Saisie comptable clients/fournisseurs',
-      'Déclarations de TVA',
+      'Participation à la préparation des déclarations de TVA',
       'Suivi des échéances',
       'Excel & Pennylane au quotidien',
       'Organisation administrative',
-      'Échanges clients',
+      'Rigueur de traitement',
     ],
     missionTitle: 'Compétences clés (missions concrètes)',
     missionBadges: [
       'Saisie comptable clients/fournisseurs',
-      'Déclarations de TVA',
+      'Tenue comptable',
+      'Participation à la déclaration de TVA',
       'Suivi des échéances',
       'Excel & Pennylane',
-      'Échanges clients',
       'Organisation administrative',
+      'Anglais professionnel',
     ],
     whyTitle: 'Pourquoi mon profil est adapté',
     whyByType: {
       cabinet:
-        'Je suis déjà opérationnel sur les missions comptables courantes en cabinet: saisie, TVA, suivi documentaire et échanges clients. Mon objectif est de progresser sur la qualité de production et d\'apporter une exécution fiable au quotidien.',
+        'Je suis opérationnel sur les missions de tenue comptable: saisie, organisation des pièces, respect des échéances et exécution fiable sur Pennylane et Excel. Mon objectif est de progresser durablement sur la qualité de production.',
       entreprise:
-        'Je peux contribuer rapidement à la tenue comptable, au suivi des pièces, aux contrôles et à la relation avec les interlocuteurs internes/externes. Mon profil est orienté rigueur, continuité et montée en compétences.',
+        'Je peux contribuer rapidement à la tenue comptable, au suivi des échéances et aux contrôles de cohérence. Mon profil est orienté rigueur, continuité et montée en compétences.',
       autre:
         'Mon profil combine comptabilité, autonomie et polyvalence entrepreneuriale. Je peux m\'adapter vite à un environnement dynamique tout en gardant une base financière solide pour sécuriser le suivi opérationnel.',
     },
@@ -55,7 +56,7 @@ const homeText = {
     role: 'Accounting & management work-study candidate - available for September 2026 intake',
     meta: 'Lille · 3 weeks in company and 1 week of classes',
     keySkills:
-      'Key skills: bookkeeping, VAT, client communication, Excel, Pennylane.',
+      'Key skills: bookkeeping, accounting support, Excel, Pennylane, professional English.',
     cardsTitle: 'What you are looking for',
     cards: [
       { label: 'Target role', value: 'Accounting / management work-study' },
@@ -69,27 +70,28 @@ const homeText = {
     operationalTitle: 'Operational from day one',
     operationalItems: [
       'Customer and supplier bookkeeping',
-      'VAT returns',
+      'Participation in VAT filing preparation',
       'Deadline tracking',
       'Daily Excel & Pennylane usage',
       'Administrative organization',
-      'Client communication',
+      'Consistent execution',
     ],
     missionTitle: 'Key skills (concrete missions)',
     missionBadges: [
       'Customer/supplier bookkeeping',
-      'VAT returns',
+      'Accounting operations',
+      'VAT filing support',
       'Deadline tracking',
       'Excel & Pennylane',
-      'Client communication',
       'Administrative organization',
+      'Professional English',
     ],
     whyTitle: 'Why this profile fits',
     whyByType: {
       cabinet:
-        'I am already operational on core accounting-firm missions: bookkeeping, VAT, document monitoring and client communication. My objective is to deliver reliable execution and keep improving production quality.',
+        'I am operational on core bookkeeping missions: entries, schedule discipline and reliable execution with Pennylane and Excel. My objective is to keep improving production quality over time.',
       entreprise:
-        'I can quickly support bookkeeping flow, document controls and communication with internal/external stakeholders. My profile is built around rigor, consistency and continuous progression.',
+        'I can quickly support bookkeeping flow, consistency checks and deadline follow-up. My profile is built around rigor, consistency and continuous progression.',
       autre:
         'My profile combines accounting execution, autonomy and entrepreneurial versatility. I can adapt fast to dynamic environments while maintaining strong financial discipline.',
     },
